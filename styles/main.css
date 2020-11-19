@@ -1,3 +1,4 @@
+/* Grid 1 */
 .grid {
     display: grid;
     justify-content: center;
@@ -27,12 +28,12 @@
     background-color: wheat;
 }
 
-/* Second grid container */
+/*  Grid 2 */
 .grid-2 {
     display: grid;
     justify-content: center;
     grid-template-columns: 50px 50px 50px 150px;
-    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px auto;
 }
 
 .box {
@@ -41,15 +42,38 @@
     background-color: crimson;
 }
 
-.message {
+.message-headline {
     grid-column: 3 / -1;
     grid-row: 3 / span 1;
-        
-
 }
 
-.message h1 {
+.message-headline h1 {
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px black;
+}
+
+.message-text {
+    grid-column: 3 / -1;
+    grid-row: 4;
+}
+
+/* Grid 3 */
+.grid-3 {
+    display: grid;
+    /* justify-content: center; */
+    gap: 20px 10px;
+    grid-template-columns: 1fr repeat(3, 50px) 1fr;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grid-3-item {
+    background-color: blueviolet;
+    padding: 10px;
+    color: white;
+}
+.grid-3-item-9 {
+    grid-column: span 2;
 }
