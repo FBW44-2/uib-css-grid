@@ -1,0 +1,55 @@
+.grid {
+    display: grid;
+    justify-content: center;
+    /* Define explicit grid */
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 200px;
+    /* Implicit */
+    /* Size of auto created rows, by default it will be auto */
+    grid-auto-rows: 300px;
+    /* Fill first the column, then move to the next one */
+    /* grid-auto-flow: column; */
+    background-color: mistyrose;
+}
+
+.item1 {
+    grid-column: span 2;
+}
+
+.item2 {
+    grid-row: 3 / 5;
+    background-color: aquamarine;
+}
+
+.item7 {
+    grid-column: 1 / -1; /* take all columns, from 1st column line to last column line */
+    grid-row: 1 / 2;
+    background-color: wheat;
+}
+
+/* Second grid container */
+.grid-2 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50px 50px 50px 150px;
+    grid-template-rows: 50px 50px 50px 50px;
+}
+
+.box {
+    grid-column: 2 / span 2;
+    grid-row: 2 / 4;
+    background-color: crimson;
+}
+
+.message {
+    grid-column: 3 / -1;
+    grid-row: 3 / span 1;
+        
+
+}
+
+.message h1 {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+}
