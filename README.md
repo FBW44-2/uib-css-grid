@@ -11,4 +11,3 @@ fr - fraction of free space
 
 - grid-column
 - grid-row
-
